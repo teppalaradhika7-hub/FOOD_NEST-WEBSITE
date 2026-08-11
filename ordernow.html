@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Nest - Order</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f1ff;
+            color: #35145c;
+        }
+
+        .navbar {
+            height: 75px;
+            background-color: #35145c;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+        .menu {
+            padding: 50px 60px;
+            text-align: center;
+        }
+
+        .menu h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .menu > p {
+            color: #6b557a;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .item {
+            width: 220px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+
+            box-shadow: 0 6px 18px rgba(53, 20, 92, 0.12);
+        }
+
+        .item img {
+            width: 170px;
+            height: 170px;
+            object-fit: contain;
+        }
+
+        .item h2 {
+            margin: 12px 0 8px;
+            font-size: 20px;
+        }
+
+        .price {
+            color: #7542c2;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .order-btn {
+            margin-top: 15px;
+            padding: 10px 22px;
+
+            border: none;
+            border-radius: 20px;
+
+            background-color: #7542c2;
+            color: white;
+
+            cursor: pointer;
+        }
+
+        .order-btn:hover {
+            background-color: #51268c;
+        }
+
+        .home-btn {
+            display: inline-block;
+            margin-top: 40px;
+
+            background-color: #35145c;
+            color: white;
+
+            padding: 12px 25px;
+            border-radius: 25px;
+
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Food Nest
+        </div>
+
+        <div class="nav-links">
+
+            <a href="foodnest.html">Home</a>
+
+            <a href="food nest search.html">Search</a>
+
+            <a href="about.html">About</a>
+
+            <a href="service.html">Services</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MENU -->
+
+    <section class="menu">
+
+        <h1>Our Delicious Menu</h1>
+
+        <p>
+            Choose your favourite donuts and bakery items
+        </p>
+
+
+        <div class="items">
+
+
+            <!-- Chocolate Donut -->
+
+            <div class="item">
+
+                <img src="chocolatedonut.png">
+
+                <h2>Chocolate Donut</h2>
+
+                <p class="price">₹40</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Strawberry Donut -->
+
+            <div class="item">
+
+                <img src="strawberry donut.png">
+
+                <h2>Strawberry Donut</h2>
+
+                <p class="price">₹40</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Vanilla Donut -->
+
+            <div class="item">
+
+                <img src="vanilla donut.png">
+
+                <h2>Vanilla Donut</h2>
+
+                <p class="price">₹40</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Chocolate Pastry -->
+
+            <div class="item">
+
+                <img src="pastrychoco.png">
+
+                <h2>Chocolate Pastry</h2>
+
+                <p class="price">₹60</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Blueberry Muffin -->
+
+            <div class="item">
+
+                <img src="blueberry muffin.png">
+
+                <h2>Blueberry Muffin</h2>
+
+                <p class="price">₹50</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Croissant -->
+
+            <div class="item">
+
+                <img src="croissant.png">
+
+                <h2>Croissant</h2>
+
+                <p class="price">₹50</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Red Velvet Cake -->
+
+            <div class="item">
+
+                <img src="red-velvet.png">
+
+                <h2>Red Velvet Cake</h2>
+
+                <p class="price">₹120</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Cupcake -->
+
+            <div class="item">
+
+                <img src="cupcake.png">
+
+                <h2>Chocolate Cupcake</h2>
+
+                <p class="price">₹45</p>
+
+                <button class="order-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            
+
+        <div class="item">
+        <img src="strawberry-pastry.png">
+        <h2>Strawberry Pastry</h2>
+        <p class="price">₹65</p>
+        <button class="order-btn">Add to Cart</button>
+    </div>
+
+
+             <!-- CHEESECAKES -->
+
+             <div class="item">
+                 <img src="strawberry-cheesecake.png">
+                <h2>Strawberry Cheesecake</h2>
+                 <p class="price">₹120</p>
+                <button class="order-btn">
+                  Add to Cart
+                </button>
+    </div>
+
+     <div class="item">
+        <img src="blueberry-cheesecake.png">
+        <h2>Blueberry Cheesecake</h2>
+        <p class="price">₹130</p>
+        <button class="order-btn">Add to Cart</button>
+    </div>
+
+
+    <!-- PUDDING -->
+
+    <div class="item">
+        <img src="chocolate-pudding.png">
+        <h2>Chocolate Pudding</h2>
+        <p class="price">₹70</p>
+        <button class="order-btn">Add to Cart</button>
+    </div>
+
+    <!-- BREAD -->
+
+    <div class="item">
+        <img src="garlic-bread.png">
+        <h2>Garlic Bread</h2>
+        <p class="price">₹80</p>
+        <button class="order-btn">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="sandwich.png">
+        <h2>Veg Sandwich</h2>
+        <p class="price">₹90</p>
+        <button class="order-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+        <a href="foodnest.html" class="home-btn">
+            🏠 Go to Home
+        </a>
+
+    </section>
+
+</body>
+
+</html>

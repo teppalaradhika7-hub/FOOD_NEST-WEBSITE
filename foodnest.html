@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Nest</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<a href="food nest.html">Home</a>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3edff;
+            color: #35145c;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            height: 75px;
+            background-color: #35145c;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+        .profile-icon {
+            font-size: 20px !important;
+        }
+
+
+        /* ================= HERO SECTION ================= */
+
+        .hero {
+            min-height: calc(100vh - 75px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 50px 70px;
+
+            background: linear-gradient(
+                120deg,
+                #f7f1ff,
+                #e8d9ff
+            );
+        }
+
+
+        /* ================= LEFT SIDE ================= */
+
+        .hero-text {
+            width: 48%;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            color: #35145c;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #7b3fc6;
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #593b72;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .order-btn {
+            display: inline-block;
+
+            background-color: #7542c2;
+            color: white;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #51268c;
+            transform: scale(1.05);
+        }
+
+
+        /* ================= DONUT IMAGE ================= */
+
+        .hero-image {
+            width: 70%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 10000px;
+
+            border-radius: 30px;
+
+            filter: drop-shadow(0 20px 20px rgba(53, 20, 92, 0.25));
+        }
+        .items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.item-card {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            display: flex;
+            gap: 35px;
+            margin-top: 45px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature i {
+            font-size: 25px;
+            color: #7542c2;
+        }
+
+        .feature span {
+            color: #4b3063;
+            font-size: 15px;
+        }
+
+        /* ================= FEATURES BELOW POPULAR ITEMS ================= */
+
+.features-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 30px 60px;
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(53, 20, 92, 0.10);
+}
+
+.feature {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.feature-icon {
+    font-size: 32px;
+}
+
+.feature h3 {
+    color: #35145c;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #6b557a;
+    font-size: 13px;
+}
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 25px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 45px;
+            }
+
+            .hero-text p {
+                margin: 20px auto;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            .features {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Food Nest
+        </div>
+
+        <div class="nav-links">
+
+            <a href="foodnest.html">Home</a>
+
+            <a href="food nest search.html">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    Search
+</a>
+
+            <a href="about.html">
+                About
+            </a>
+           <a href="service.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <<a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="hero-text">
+
+            <h1>
+                Delicious Donuts,
+                <br>
+                <span>Made for You!</span>
+            </h1>
+
+            <p>
+                Freshly baked donuts made with love
+                and the finest ingredients.
+            </p>
+
+            <a href="ordernow.html" class="order-btn">
+                Order Now
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>
+                        Fresh<br>
+                        Ingredients
+                    </span>
+                </div>
+
+
+                <div class="feature">
+                    <i class="fa-solid fa-award"></i>
+                    <span>
+                        Premium<br>
+                        Quality
+                    </span>
+                </div>
+
+
+                <div class="feature">
+                    <i class="fa-solid fa-truck"></i>
+                    <span>
+                        Fast<br>
+                        Delivery
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="hero-image">
+    <img src="donuts.png" alt="Delicious Donuts">
+</div>
+
+    </section>
+
+<!-- Popular Items Section -->
+
+<section class="popular-section">
+
+    <div class="section-heading">
+        <h2>Popular Items</h2>
+        <a href="#">View All →</a>
+    </div>
+
+    <div class="items-container">
+
+        <!-- Chocolate Donut -->
+        <div class="item-card">
+            <img src="chocolatedonut.png" width="150" height="150" alt="Chocolate Donut">
+
+            <div class="item-info">
+                <h3>Chocolate Donut</h3>
+
+                <div class="price-row">
+                    <span>₹40</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Strawberry Donut -->
+        <div class="item-card">
+            <img src="strawberry donut.png" width="150" height="150" alt="Strawberry Donut">
+
+            <div class="item-info">
+                <h3>Strawberry Donut</h3>
+
+                <div class="price-row">
+                    <span>₹40</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Vanilla Donut -->
+        <div class="item-card">
+            <img src="vanilla donut.png" width="150" height="150" alt="Vanilla Donut">
+
+            <div class="item-info">
+                <h3>Vanilla Donut</h3>
+
+                <div class="price-row">
+                    <span>₹40</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Chocolate Pastry -->
+        <div class="item-card">
+            <img src="pastrychoco.png" width="150" height="150" alt="Chocolate Pastry">
+
+            <div class="item-info">
+                <h3>Choco Pastry</h3>
+
+                <div class="price-row">
+                    <span>₹60</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Blueberry Muffin -->
+        <div class="item-card">
+            <img src="blueberry muffin.png" width="150" height="150" alt="Blueberry Muffin">
+
+            <div class="item-info">
+                <h3>Blueberry Muffin</h3>
+
+                <div class="price-row">
+                    <span>₹50</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Croissant -->
+        <div class="item-card">
+            <img src="croissant.png" width="150" height="150" alt="Butter Croissant">
+
+            <div class="item-info">
+                <h3>Butter Croissant</h3>
+
+                <div class="price-row">
+                    <span>₹50</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Features Section -->
+
+<section class="features-section">
+
+    <div class="feature">
+        <span class="feature-icon">🍃</span>
+        <div>
+            <h3>Fresh Ingredients</h3>
+            <p>We use the finest and fresh ingredients.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span class="feature-icon">🏆</span>
+        <div>
+            <h3>Premium Quality</h3>
+            <p>Premium quality in every bite you take.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span class="feature-icon">🚚</span>
+        <div>
+            <h3>Fast Delivery</h3>
+            <p>Get your order delivered fast and fresh.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span class="feature-icon">♡</span>
+        <div>
+            <h3>Made with Love</h3>
+            <p>Every item is baked with love and care.</p>
+        </div>
+    </div>
+
+
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Nest - About Us</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f1ff;
+            color: #35145c;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            height: 75px;
+            background-color: #35145c;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about {
+            min-height: calc(100vh - 75px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 60px 80px;
+
+            background: linear-gradient(
+                120deg,
+                #f8f2ff,
+                #e9dcff
+            );
+        }
+
+
+        /* LEFT SIDE */
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h1 {
+            font-size: 50px;
+            color: #35145c;
+            margin-bottom: 20px;
+        }
+
+        .about-text h1 span {
+            color: #7542c2;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #5d4770;
+            margin-bottom: 18px;
+        }
+
+
+        /* BUTTON */
+
+        .home-btn {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            background-color: #7542c2;
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+        }
+
+        .home-btn:hover {
+            background-color: #51268c;
+        }
+
+
+        /* ================= RIGHT SIDE ================= */
+
+        .about-image {
+            width: 45%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+
+            object-fit: contain;
+
+            filter: drop-shadow(
+                0 15px 20px rgba(53, 20, 92, 0.25)
+            );
+        }
+
+
+        /* ================= FEATURES ================= */
+
+        .about-features {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-feature i {
+            color: #7542c2;
+            font-size: 25px;
+        }
+
+        .about-feature span {
+            color: #5d4770;
+            font-size: 14px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 25px;
+            }
+
+            .about-text {
+                width: 100%;
+            }
+
+            .about-text h1 {
+                font-size: 40px;
+            }
+
+            .about-image {
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            .about-features {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Food Nest
+        </div>
+
+        <div class="nav-links">
+
+            <a href="foodnest.html">Home</a>
+
+            <a href="food nest search.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+           <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+
+
+        <!-- LEFT -->
+
+        <div class="about-text">
+
+            <h1>
+                About <span>Food Nest</span>
+            </h1>
+
+            <p>
+                Welcome to Food Nest, your happy place for
+                delicious donuts and freshly baked bakery items.
+            </p>
+
+            <p>
+                We believe that every sweet moment deserves
+                something special. From soft and fluffy donuts
+                to delicious pastries and muffins, we prepare
+                our treats with care and quality ingredients.
+            </p>
+
+            <p>
+                Our goal is simple — to bring fresh,
+                delicious and delightful bakery treats
+                right to you.
+            </p>
+
+
+            <!-- FEATURES -->
+
+            <div class="about-features">
+
+                <div class="about-feature">
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <span>
+                        Fresh<br>
+                        Ingredients
+                    </span>
+                </div>
+
+
+                <div class="about-feature">
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        Made with<br>
+                        Love
+                    </span>
+                </div>
+
+
+                <div class="about-feature">
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+                        Premium<br>
+                        Quality
+                    </span>
+                </div>
+
+            </div>
+
+
+            <br>
+
+            <a href="foodnest.html" class="home-btn">
+                <i class="fa-solid fa-house"></i>
+                Back to Home
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="about-image">
+
+            <img src="donuts.png" alt="Food Nest Donuts">
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>

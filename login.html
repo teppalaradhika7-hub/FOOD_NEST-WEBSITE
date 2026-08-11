@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Nest - Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            width: 400px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(53,20,92,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #35145c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6b557a;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #d3c1e5;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 25px;
+            background: #7542c2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #51268c;
+        }
+
+        a {
+            color: #7542c2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>Welcome Back!</h1>
+
+    <p>Login to your Food Nest account</p>
+
+    <input type="email" id="email"
+           placeholder="Enter your email">
+
+    <input type="password" id="password"
+           placeholder="Enter your password">
+
+    <button onclick="login()">
+        Login
+    </button>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">Create New Account</a>
+    </p>
+
+    <a href="foodnest.html" class="home">
+        🏠 Go to Home
+    </a>
+
+</div>
+
+
+<script>
+
+function login() {
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let savedEmail = localStorage.getItem("email");
+    let savedPassword = localStorage.getItem("password");
+
+    if (email === savedEmail && password === savedPassword) {
+
+        localStorage.setItem("loggedIn", "true");
+
+        window.location.href = "profile.html";
+
+    } else {
+
+        alert("Invalid email or password!");
+
+    }
+}
+
+</script>
+
+</body>
+</html>

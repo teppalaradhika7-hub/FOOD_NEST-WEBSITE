@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Nest - Search</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f1ff;
+            color: #35145c;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 75px;
+            background-color: #35145c;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+        /* SEARCH PAGE */
+
+        .search-page {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .search-page h1 {
+            font-size: 42px;
+            color: #35145c;
+            margin-bottom: 10px;
+        }
+
+        .search-page p {
+            color: #6b557a;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* SEARCH BOX */
+
+        .search-box {
+            width: 600px;
+            max-width: 90%;
+            height: 55px;
+
+            margin: 0 auto 50px;
+
+            background-color: white;
+            border: 2px solid #cdb5e8;
+            border-radius: 30px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 20px;
+        }
+
+        .search-box i {
+            color: #7542c2;
+            font-size: 20px;
+        }
+
+        .search-box input {
+            flex: 1;
+
+            border: none;
+            outline: none;
+
+            padding: 10px 15px;
+
+            font-size: 17px;
+            color: #35145c;
+        }
+
+        .search-box button {
+            background-color: #7542c2;
+            color: white;
+
+            border: none;
+            border-radius: 25px;
+
+            padding: 10px 22px;
+
+            cursor: pointer;
+        }
+
+        /* ITEMS */
+
+        .items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .item-card {
+            width: 190px;
+
+            background-color: white;
+
+            border-radius: 18px;
+
+            padding: 15px;
+
+            box-shadow: 0 5px 15px rgba(53, 20, 92, 0.12);
+        }
+
+        .item-card img {
+            width: 150px;
+            height: 150px;
+
+            object-fit: contain;
+        }
+
+        .item-card h3 {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .price {
+            color: #7542c2;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Food Nest
+        </div>
+
+        <div class="nav-links">
+
+           <a href="foodnest.html">Home</a>
+
+            <a href="food nest search.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- SEARCH PAGE -->
+
+    <section class="search-page">
+
+        <h1>Search Our Menu</h1>
+
+        <p>
+            Find your favourite donuts and bakery items
+        </p>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search donuts, cakes, muffins..."
+            >
+
+            <button onclick="searchItems()">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- ITEMS -->
+
+        <div class="items-container" id="itemsContainer">
+
+            <div class="item-card">
+                <img src="chocolatedonut.png">
+                <h3>Chocolate Donut</h3>
+                <p class="price">₹40</p>
+            </div>
+
+            <div class="item-card">
+                <img src="strawberry donut.png">
+                <h3>Strawberry Donut</h3>
+                <p class="price">₹40</p>
+            </div>
+
+            <div class="item-card">
+                <img src="vanilla donut.png">
+                <h3>Vanilla Donut</h3>
+                <p class="price">₹40</p>
+            </div>
+
+            <div class="item-card">
+                <img src="pastrychoco.png">
+                <h3>Choco Pastry</h3>
+                <p class="price">₹60</p>
+            </div>
+
+            <div class="item-card">
+                <img src="blueberry muffin.png">
+                <h3>Blueberry Muffin</h3>
+                <p class="price">₹50</p>
+            </div>
+
+            <div class="item-card">
+                <img src="croissant.png">
+                <h3>Croissant</h3>
+                <p class="price">₹50</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH FUNCTION -->
+
+    <script>
+
+        function searchItems() {
+
+            let input =
+                document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let cards =
+                document.querySelectorAll(".item-card");
+
+            cards.forEach(function(card) {
+
+                let name =
+                    card.querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+                if (name.includes(input)) {
+                    card.style.display = "block";
+                }
+                else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

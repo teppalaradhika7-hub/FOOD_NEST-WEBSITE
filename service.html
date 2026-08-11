@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Nest - Services</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f1ff;
+            color: #35145c;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            height: 75px;
+            background-color: #35145c;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            padding: 55px 70px;
+            text-align: center;
+        }
+
+        .services h1 {
+            font-size: 45px;
+            color: #35145c;
+            margin-bottom: 10px;
+        }
+
+        .services h1 span {
+            color: #7542c2;
+        }
+
+        .services > p {
+            color: #6b557a;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+
+        /* ================= SERVICE CARDS ================= */
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 260px;
+            min-height: 250px;
+
+            background-color: white;
+
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 6px 18px rgba(53, 20, 92, 0.12);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        /* ICON */
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background-color: #eadcff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon i {
+            font-size: 30px;
+            color: #7542c2;
+        }
+
+
+        /* TEXT */
+
+        .service-card h2 {
+            color: #35145c;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #6b557a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+
+        /* ================= HOME BUTTON ================= */
+
+        .home-btn {
+            display: inline-block;
+
+            margin-top: 45px;
+
+            background-color: #7542c2;
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+        }
+
+        .home-btn:hover {
+            background-color: #51268c;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .services {
+                padding: 40px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Food Nest
+        </div>
+
+        <div class="nav-links">
+
+            <a href="foodnest.html">
+                Home
+            </a>
+
+            <a href="food nest search.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+<a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <h1>Our <span>Services</span></h1>
+
+        <p>
+            We make your bakery experience fresh, easy and delicious.
+        </p>
+
+
+        <div class="service-container">
+
+
+            <!-- SERVICE 1 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h2>Easy Ordering</h2>
+
+                <p>
+                    Browse our delicious donuts and bakery items
+                    and place your order easily.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <h2>Fast Delivery</h2>
+
+                <p>
+                    Get your favourite bakery treats delivered
+                    fresh and quickly to your doorstep.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+
+                <h2>Fresh Bakery</h2>
+
+                <p>
+                    Enjoy freshly prepared donuts, pastries,
+                    muffins and other bakery treats.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICE 4 -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h2>Quality Service</h2>
+
+                <p>
+                    We focus on quality ingredients, delicious
+                    taste and a great customer experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- GO TO HOME -->
+
+        <a href="foodnest.html" class="home-btn">
+            <i class="fa-solid fa-house"></i>
+            Go to Home
+        </a>
+
+    </section>
+
+
+</body>
+
+</html>

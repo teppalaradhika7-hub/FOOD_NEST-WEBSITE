@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Food Nest - Profile</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            margin: 0;
+
+            background: #f7f1ff;
+
+            color: #35145c;
+        }
+
+
+        /* NAVBAR */
+
+        .navbar {
+
+            height: 75px;
+
+            background: #35145c;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 60px;
+        }
+
+        .logo {
+
+            color: white;
+
+            font-size: 30px;
+
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 30px;
+        }
+
+        .nav-links a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 16px;
+        }
+
+
+        /* PROFILE */
+
+        .profile-section {
+
+            min-height: calc(100vh - 75px);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 40px;
+        }
+
+
+        .profile-card {
+
+            width: 500px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 8px 25px rgba(53,20,92,0.15);
+        }
+
+
+        .profile-icon {
+
+            width: 100px;
+
+            height: 100px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #eadcff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 50px;
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            color: #35145c;
+
+            margin: 20px 0 30px;
+        }
+
+
+        .detail {
+
+            background: #f7f1ff;
+
+            padding: 15px;
+
+            margin: 12px 0;
+
+            border-radius: 10px;
+        }
+
+
+        .detail strong {
+
+            color: #7542c2;
+
+        }
+
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        .buttons a,
+        .buttons button {
+
+            flex: 1;
+
+            padding: 13px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            border: none;
+
+            text-decoration: none;
+
+            cursor: pointer;
+        }
+
+
+        .home-btn {
+
+            background: #7542c2;
+
+            color: white;
+        }
+
+
+        .logout-btn {
+
+            background: #eadcff;
+
+            color: #35145c;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        Food Nest
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="search.html">Search</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="profile.html">Profile</a>
+
+    </div>
+
+</nav>
+
+
+<section class="profile-section">
+
+
+<div class="profile-card">
+
+
+    <div class="profile-icon">
+        👤
+    </div>
+
+
+    <h1>My Profile</h1>
+
+
+    <div class="detail">
+
+        <strong>Name:</strong>
+
+        <span id="profileName"></span>
+
+    </div>
+
+
+    <div class="detail">
+
+        <strong>Email:</strong>
+
+        <span id="profileEmail"></span>
+
+    </div>
+
+
+    <div class="detail">
+
+        <strong>Phone:</strong>
+
+        <span id="profilePhone"></span>
+
+    </div>
+
+
+    <div class="detail">
+
+        <strong>Address:</strong>
+
+        <span id="profileAddress"></span>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <a href="foodnest.html"
+           class="home-btn">
+
+            🏠 Go to Home
+
+        </a>
+
+
+        <button
+            class="logout-btn"
+            onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+<script>
+
+/* CHECK LOGIN */
+
+if (localStorage.getItem("loggedIn") !== "true") {
+
+    window.location.href = "login.html";
+
+}
+
+
+/* SHOW USER DETAILS */
+
+document.getElementById("profileName").textContent =
+    localStorage.getItem("name");
+
+document.getElementById("profileEmail").textContent =
+    localStorage.getItem("email");
+
+document.getElementById("profilePhone").textContent =
+    localStorage.getItem("phone");
+
+document.getElementById("profileAddress").textContent =
+    localStorage.getItem("address");
+
+
+/* LOGOUT */
+
+function logout() {
+
+    localStorage.removeItem("loggedIn");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>

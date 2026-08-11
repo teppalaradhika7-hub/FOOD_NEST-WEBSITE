@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Food Nest - Create Account</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f1ff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .register-box {
+
+            width: 450px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(53,20,92,0.15);
+
+            text-align: center;
+        }
+
+        h1 {
+            color: #35145c;
+        }
+
+        p {
+            color: #6b557a;
+        }
+
+        input {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin: 8px 0;
+
+            border: 1px solid #d3c1e5;
+
+            border-radius: 10px;
+
+            outline: none;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 15px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #7542c2;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #51268c;
+        }
+
+        a {
+            color: #7542c2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="register-box">
+
+    <h1>Create Account</h1>
+
+    <p>Join Food Nest today!</p>
+
+
+    <input type="text"
+           id="name"
+           placeholder="Full Name">
+
+
+    <input type="email"
+           id="email"
+           placeholder="Email Address">
+
+
+    <input type="tel"
+           id="phone"
+           placeholder="Phone Number">
+
+
+    <input type="text"
+           id="address"
+           placeholder="Address">
+
+
+    <input type="password"
+           id="password"
+           placeholder="Create Password">
+
+
+    <button onclick="createAccount()">
+        Create Account
+    </button>
+
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+
+</div>
+
+
+<script>
+
+function createAccount() {
+
+    let name =
+        document.getElementById("name").value;
+
+    let email =
+        document.getElementById("email").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let address =
+        document.getElementById("address").value;
+
+    let password =
+        document.getElementById("password").value;
+
+
+    if (
+        name === "" ||
+        email === "" ||
+        phone === "" ||
+        address === "" ||
+        password === ""
+    ) {
+
+        alert("Please fill all the fields.");
+
+        return;
+    }
+
+
+    localStorage.setItem("name", name);
+
+    localStorage.setItem("email", email);
+
+    localStorage.setItem("phone", phone);
+
+    localStorage.setItem("address", address);
+
+    localStorage.setItem("password", password);
+
+
+    alert("Account created successfully!");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
