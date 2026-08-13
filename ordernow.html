@@ -70,20 +70,12 @@
 /* ITEMS */
 
 .items {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    justify-content: center;
+    gap: 25px;
 
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    justify-content: flex-start;
-
-    padding: 10px 10px 25px;
-
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 
 /* Hide horizontal scrollbar */
@@ -101,24 +93,18 @@
 /* ITEM CARD */
 
 .item {
-    flex: 0 0 220px;
-
     width: 220px;
     height: 340px;
 
     background-color: white;
-
     padding: 15px;
-
     border-radius: 20px;
 
     box-shadow: 0 6px 18px rgba(53, 20, 92, 0.12);
 
     text-align: center;
-
     overflow: hidden;
 }
-
 
 /* IMAGE */
 
@@ -128,10 +114,7 @@
 
     object-fit: contain;
     object-position: center;
-
-    display: block;
 }
-
 
 /* ITEM NAME */
 
